@@ -2,8 +2,6 @@ import requests
 import json
 import os
 
-from base import ip, meuip
-
 
 def clear():
     os.system('cls')
