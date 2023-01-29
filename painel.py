@@ -2,6 +2,8 @@ import requests
 import json
 import os
 
+# Optei por juntar todos os scripts em um único código, ao invés de importar eles da pasta 'bases'
+
 
 def clear():
     os.system('cls')
