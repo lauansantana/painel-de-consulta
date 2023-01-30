@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+from bases import ddd
 
 # Optei por juntar todos os scripts em um único código, ao invés de importar eles da pasta 'bases'
 
@@ -238,6 +239,43 @@ def consulta_cep():
                 restart = str(input('Deseja realizar outra consulta S/N? '))
                 break
 
+# DDD
+def cabecalho_ddd(): 
+    print("** ::::::::::::::::::::::::::::: **")
+    print(":: :::::: Consulta de DDD :::::: ::")
+    print("** ::::::::::::::::::::::::::::: **")
+    print('')
+
+    
+def consulta_ddd():
+    clear()
+    cabecalho_ddd()
+    restart = 's'
+    while restart == 's':
+        while True:
+            ddd_input = input('Digite o DDD: ')
+            if len(ddd_input) !=2:
+                clear()
+                print('DDD Inválido:')
+                restart = str(input('Deseja realizar outra consulta S/N? '))
+                break
+
+            requisicao = requests.get('https://brasilapi.com.br/api/ddd/v1/{}'.format(ddd_input))
+            requisicao_ddd = requisicao.json()
+
+            if 'message' not in requisicao_ddd:
+                clear()
+                print('Estado: {}'.format(requisicao_ddd['state']))
+                print('Cidades: {}'.format(requisicao_ddd['cities']))
+                print('')
+                restart = str(input('Deseja realizar outra consulta? S/N '))
+                break
+            else:
+                clear()
+                print('DDD nao encontrado')
+                restart = str(input('Deseja realizar outra consulta? S/N '))
+                break
+
 
 def menu():
     clear()
@@ -250,6 +288,7 @@ def menu():
     print("| COVID19:         ->  [3]    |")
     print("| CNPJ:            ->  [4]    |")
     print("| CEP:             ->  [5]    |")
+    print("| DDD:             ->  [6]    |")
     print("-------------------------------")
     print("** ::::::::::::::::::::::::: **")
     print('')
@@ -269,6 +308,8 @@ while restart == 's':
             consulta_cnpj()
         elif escolha == '5':
             consulta_cep()
+        elif escolha == '6':
+            consulta_ddd()
         else:
-            restart = str(input('Entrada Inválida.\nTente Novamente\nPara sair digite N: '))
+            restart = str(input('Entrada Inválida.\nPara sair digite N: '))
             break
