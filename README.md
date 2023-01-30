@@ -12,6 +12,9 @@ Pequeno painel simples que permite consultar os seguintes dados:
 | COVID19:             [X]    |
 | CNPJ:                [X]    |
 | CEP:                 [X]    |
+| CPF:                 [ ]    |
+| PLACA:               [ ]    |
+| TELEFONE:            [ ]    |
 -------------------------------
 :: ::::::::::::::::::::::::: ::
 ```
