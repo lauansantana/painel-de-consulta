@@ -7,7 +7,7 @@ from bases import ddd
 
 
 def clear():
-    os.system('cls')
+    os.system('clear')
 
 # Meu IP
 def cabecalho_meuip():
