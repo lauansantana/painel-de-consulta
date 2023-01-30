@@ -12,12 +12,15 @@ Pequeno painel simples que permite consultar os seguintes dados:
 | COVID19:             [X]    |
 | CNPJ:                [X]    |
 | CEP:                 [X]    |
+| DDD:                 [X]    |
 | CPF:                 [ ]    |
 | PLACA:               [ ]    |
 | TELEFONE:            [ ]    |
 -------------------------------
 :: ::::::::::::::::::::::::: ::
 ```
+## Instalar biblioteca Requests caso não tenha instalado
+``` pip install requests ```
 
 ## Instalação e acesso (Linux e Termux)
 pt.1
