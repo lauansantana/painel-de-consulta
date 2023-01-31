@@ -19,7 +19,9 @@ Pequeno painel simples que permite consultar os seguintes dados:
 -------------------------------
 :: ::::::::::::::::::::::::: ::
 ```
-## Instalar biblioteca Requests caso não tenha instalado
+## Instalar biblioteca Requests 
+Caso não tenha instalado
+
 ``` pip install requests ```
 
 ## Instalação e acesso (Linux e Termux)
