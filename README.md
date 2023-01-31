@@ -4,8 +4,6 @@ Pequeno painel simples que permite consultar os seguintes dados:
 
 ```
 :: ::::::::::::::::::::::::: ::
-:: :: PAINEL DE CONSULTA  :: ::
-:: ::::::::::::::::::::::::: ::
 -------------------------------
 | MEU IP:              [X]    |
 | IP:                  [X]    |
