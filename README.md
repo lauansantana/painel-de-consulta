@@ -20,7 +20,7 @@ Pequeno painel simples que permite consultar os seguintes dados:
 :: ::::::::::::::::::::::::: ::
 ```
 ## Instalar biblioteca Requests 
-Caso não tenha instalado
+Caso não tenha instalado:
 
 ``` pip install requests ```
 
