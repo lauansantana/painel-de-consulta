@@ -5,6 +5,8 @@ from bases import ddd
 
 # Optei por juntar todos os scripts em um único código, ao invés de importar eles da pasta 'bases'
 
+def clearw():
+    os.system('cls')
 
 def clear():
     os.system('clear')
@@ -21,6 +23,7 @@ def consulta_meuip():
     while restart == 's':
         while True:
             clear()
+            clearw()
             cabecalho_meuip()
             requisicao = requests.get('http://ip-api.com/json/')
             requisicao_meuip = requisicao.json()
@@ -52,6 +55,7 @@ def cabecalho_ip2():
 
 def consulta_ip():
     clear()
+    clearw()
     cabecalho_ip2()
     restart_cep = 's'
     while restart_cep == 's':
@@ -59,6 +63,7 @@ def consulta_ip():
             ip_input = input('Digite o IP: ')
             if len(ip_input) !=15:
                 clear()
+                clearw()
                 print('IP Inválido:')
                 restart_cep = str(input('Deseja realizar outra consulta S/N? '))
                 break
@@ -68,6 +73,7 @@ def consulta_ip():
 
             if 'message' not in requisicao_ip:
                 clear()
+                clearw()
                 cabecalho_ip2()
                 print('IP: {}'.format(requisicao_ip['query']))
                 print('País: {}'.format(requisicao_ip['country']))
@@ -81,6 +87,7 @@ def consulta_ip():
                 break
             else:
                 clear()
+                clearw()
                 print(requisicao_ip['status'])
                 print('IP inválido')
                 restart_cep = str(input('Deseja realizar outra consulta? S/N '))
@@ -95,6 +102,7 @@ def cabecalho_covid():
 
 def consulta_covid():
     clear()
+    clearw()
     cabecalho_covid()
     restart = 's'
     while restart == 's':
@@ -123,6 +131,7 @@ def consulta_covid():
 
                 restart = str(input('Deseja realizar outra consulta S/N?'))
                 clear()
+                clearw()
                 break
 
 # CNPJ
@@ -140,6 +149,7 @@ def cabecalho_cnpj2():
 
 def consulta_cnpj():
     clear()
+    clearw()
     restart = 's'
     while restart == 's':
         while True:
@@ -147,6 +157,7 @@ def consulta_cnpj():
             cnpj_input = input('Informe o CNPJ: ')
             if len(cnpj_input) !=14:
                 clear()
+                clearw()
                 print('CNPJ inválido')
                 restart = str(input('Deseja realizar uma nova consulta? S/N'))
                 break
@@ -156,12 +167,14 @@ def consulta_cnpj():
             
             if 'message' in requisicao_cnpj:
                 clear()
+                clearw()
                 print(requisicao_cnpj['message'])
                 restart = str(input('Deseja realizar uma nova consulta? S/N '))
                 break
 
             else:
                 clear()
+                clearw()
                 cabecalho_cnpj2()
                 print('CNPJ: {}'.format(requisicao_cnpj['cnpj']))
                 print('Abertura: {}'.format(requisicao_cnpj['abertura']))
@@ -205,6 +218,7 @@ def cabecalho_cep2():
 def consulta_cep():
 
     clear()
+    clearw()
     cabecalho_cep()
     restart = 's'
     while restart == 's':
@@ -222,6 +236,7 @@ def consulta_cep():
 
             if 'status' not in requisicao_cep:
                 clear()
+                clearw()
                 cabecalho_cep2()
                 print('CEP: {}'.format(requisicao_cep['cep']))
                 print('Endereço: {}'.format(requisicao_cep['address']))
@@ -249,6 +264,7 @@ def cabecalho_ddd():
     
 def consulta_ddd():
     clear()
+    clearw()
     cabecalho_ddd()
     restart = 's'
     while restart == 's':
@@ -256,6 +272,7 @@ def consulta_ddd():
             ddd_input = input('Digite o DDD: ')
             if len(ddd_input) !=2:
                 clear()
+                clearw()
                 print('DDD Inválido:')
                 restart = str(input('Deseja realizar outra consulta S/N? '))
                 break
@@ -265,6 +282,7 @@ def consulta_ddd():
 
             if 'message' not in requisicao_ddd:
                 clear()
+                clearw()
                 print('Estado: {}'.format(requisicao_ddd['state']))
                 print('Cidades: {}'.format(requisicao_ddd['cities']))
                 print('')
@@ -272,6 +290,7 @@ def consulta_ddd():
                 break
             else:
                 clear()
+                clearw()
                 print('DDD nao encontrado')
                 restart = str(input('Deseja realizar outra consulta? S/N '))
                 break
@@ -279,6 +298,7 @@ def consulta_ddd():
 
 def menu():
     clear()
+    clearw()
     print("** ::::::::::::::::::::::::: **")
     print(":: :: PAINEL DE CONSULTA  :: ::")
     print("** ::::::::::::::::::::::::: **")
@@ -311,5 +331,5 @@ while restart == 's':
         elif escolha == '6':
             consulta_ddd()
         else:
-            restart = str(input('Entrada Inválida.\nPara sair digite N: '))
+            restart = str(input('Entrada Inválida.\nDigite S para tentar novamente ou N para sair: '))
             break
