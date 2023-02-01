@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://user-images.githubusercontent.com/50887877/215918735-72fdc720-778e-4cad-8d33-a4d4fdd45ace.png"
+</p>
+
 # Painel de consulta
 
 Pequeno painel simples que permite consultar os seguintes dados:
