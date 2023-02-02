@@ -4,7 +4,7 @@
 
 # Painel de consulta
 
-Pequeno painel simples que permite consultar os seguintes dados:
+#### Com esse painel você pode obter diversas informações consultando os seguintes dados:
 
 ```
 :: ::::::::::::::::::::::::: ::
@@ -39,3 +39,4 @@ pt.2
 > cd painel-de-consulta
 > python3 painel.py
 ```
+##### Em breve novas opções de consulta
