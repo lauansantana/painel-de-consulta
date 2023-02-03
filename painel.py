@@ -331,5 +331,5 @@ while restart == 's':
         elif escolha == '6':
             consulta_ddd()
         else:
-            restart = str(input('Entrada Inválida.\nDigite S para tentar novamente ou N para sair: '))
+            restart = str(input('Entrada Inválida.\nDeseja tentar novamente? S/N '))
             break
