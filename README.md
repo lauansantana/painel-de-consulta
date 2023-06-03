@@ -21,10 +21,6 @@
 -------------------------------
 :: ::::::::::::::::::::::::: ::
 ```
-## Necessário a biblioteca Requests 
-Caso não tenha instalado:
-
-``` > pip install requests ```
 
 ## Instalação e acesso (Linux e Termux)
 pt.1
@@ -39,4 +35,3 @@ pt.2
 > cd painel-de-consulta
 > python3 painel.py
 ```
-##### Em breve novas opções de consulta
